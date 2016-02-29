@@ -1,8 +1,6 @@
 # Vagrant concrete5 5.7
-======
 
 ## Installation
-
 1. Install VirtualBox
 2. Install Vagrant
 3. Clone repo
@@ -11,13 +9,10 @@
 
 
 ## What it does
-----
 It installs concrete5 5.7.5.6 on Ubuntu Server 14.04 LTS with PHP 5.6.18. 
 
 
 ## Good to know
-----
-
 + It doesn't run fast
 + It doesn't install stuff like Xdebug
 + C5 username / password: admin
