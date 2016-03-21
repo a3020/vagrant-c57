@@ -2,8 +2,8 @@
 
 cd /vagrant
 
-mkdir 000
-chown vagrant:vagrant 000
+mkdir public
+chown vagrant:vagrant public
 
 apt-get update
 apt-get dist-upgrade
@@ -26,9 +26,9 @@ rm -f /etc/apache2/sites-enabled/000-default.conf
 cat > /etc/apache2/sites-enabled/000-default.conf <<EOL 
 <VirtualHost *:80>
 	ServerAdmin webmaster@localhost
-	DocumentRoot /var/www/000
+	DocumentRoot /var/www/public
 
-	<Directory /var/www/000>
+	<Directory /var/www/public>
         Options Indexes FollowSymLinks MultiViews
         AllowOverride All
         Order allow,deny
@@ -70,11 +70,11 @@ echo "## Unpack C57"
 apt-get -y install unzip
 su vagrant -c 'unzip -q concrete5.base.zip'
 
-mv concrete5.*/* 000
+mv concrete5.*/* public
 rm -rf concrete5.*/*
 rm concrete5.base.zip
 rmdir concrete5.*
-cd 000
+cd public
 
 
 echo "## Restart Apache"
