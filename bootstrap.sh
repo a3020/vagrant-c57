@@ -9,6 +9,10 @@ apt-get update
 apt-get dist-upgrade
 
 
+echo "## Install utilities"
+apt-get -y install unzip
+
+
 echo "## Install Apache"
 # Assume yes, do not prompt
 apt-get install -y apache2
@@ -63,11 +67,11 @@ mysql -u root -proot -e "CREATE DATABASE c57"
 
 
 echo "## Download C57"
-wget -q -O concrete5.base.zip https://www.concrete5.org/download_file/-/view/85780/
+ZIP_FILE="`curl -s http://www.concrete5.org/download | grep //www.concrete5.org/download_file/-/view/ | head -n 1 | cut -d '\"' -f 4`"
+wget -q -O concrete5.base.zip "https:$ZIP_FILE"
 
 
 echo "## Unpack C57"
-apt-get -y install unzip
 su vagrant -c 'unzip -q concrete5.base.zip'
 
 mv concrete5.*/* public
