@@ -67,8 +67,7 @@ mysql -u root -proot -e "CREATE DATABASE c57"
 
 
 echo "## Download C57"
-ZIP_FILE="`curl -s http://www.concrete5.org/download | grep //www.concrete5.org/download_file/-/view/ | head -n 1 | cut -d '\"' -f 4`"
-wget -q -O concrete5.base.zip "https:$ZIP_FILE"
+wget -q -O concrete5.base.zip "https://concrete5.org/latest.zip"
 
 
 echo "## Unpack C57"
