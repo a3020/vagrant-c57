@@ -65,12 +65,12 @@ apt-get -q -y install mysql-server mysql-client
 
 mysql -u root -proot -e "CREATE DATABASE c57"
 
+echo "## Download latest concrete5 release"
+wget -q -O concrete5.base.zip https://www.concrete5.org/latest.zip
 
-echo "## Download C57"
-wget -q -O concrete5.base.zip "https://concrete5.org/latest.zip"
+echo "## Unpack concrete5 ZIP"
+apt-get -y install unzip
 
-
-echo "## Unpack C57"
 su vagrant -c 'unzip -q concrete5.base.zip'
 
 mv concrete5.*/* public
@@ -90,7 +90,7 @@ chown vagrant:vagrant /var/lib/php5/sessions -R
 
 echo "## Install concrete5"
 chmod +x concrete/bin/concrete5
-concrete/bin/concrete5 c5:install --db-server=localhost --db-username=root --db-password=root --db-database=c57 \
+concrete/bin/concrete5 c5:install --db-server=localhost --db-username=root --db-password=root --db-database=c5 \
 	--admin-email=admin@example.com --admin-password=admin \
 	--starting-point=elemental_blank
 
