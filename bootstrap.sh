@@ -85,7 +85,7 @@ sudo /etc/init.d/apache2 restart
 
 echo "## Install concrete5"
 chmod +x concrete/bin/concrete5
-concrete/bin/concrete5 c5:install --db-server=localhost --db-username=root --db-password=root --db-database=c5 \
+concrete/bin/concrete5 c5:install --db-server=localhost --db-username=root --db-password=root --db-database=c57 \
 	--admin-email=admin@example.com --admin-password=admin \
 	--starting-point=elemental_blank
 
