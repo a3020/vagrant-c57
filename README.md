@@ -1,4 +1,4 @@
-# Vagrant latest concrete5
+# Vagrant concrete5 5.7.5.13
 
 ## Installation
 1. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
@@ -9,7 +9,7 @@
 
 
 ## What it does
-It installs the latest concrete5 version on Ubuntu Server 14.04 LTS with PHP 5.6.18. 
+It installs concrete5 5.7.5.13 on Ubuntu Server 14.04 LTS with PHP 5.6.18.
 
 
 ## Good to know
