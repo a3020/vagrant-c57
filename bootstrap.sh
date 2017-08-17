@@ -81,12 +81,7 @@ cd public
 
 
 echo "## Restart Apache"
-/etc/init.d/apache2 restart
-
-
-echo "## Make PHP session path writable"
-chown vagrant:vagrant /var/lib/php5/sessions -R
-
+sudo /etc/init.d/apache2 restart
 
 echo "## Install concrete5"
 chmod +x concrete/bin/concrete5
