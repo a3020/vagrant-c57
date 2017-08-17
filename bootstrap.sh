@@ -66,7 +66,7 @@ apt-get -q -y install mysql-server mysql-client
 mysql -u root -proot -e "CREATE DATABASE c57"
 
 echo "## Download latest concrete5 release"
-wget -q -O concrete5.base.zip https://www.concrete5.org/latest.zip
+wget -q -O concrete5.base.zip http://www.concrete5.org/download_file/-/view/93075/
 
 echo "## Unpack concrete5 ZIP"
 apt-get -y install unzip
