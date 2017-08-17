@@ -69,8 +69,6 @@ echo "## Download latest concrete5 release"
 wget -q -O concrete5.base.zip http://www.concrete5.org/download_file/-/view/93075/
 
 echo "## Unpack concrete5 ZIP"
-apt-get -y install unzip
-
 su vagrant -c 'unzip -q concrete5.base.zip'
 
 mv concrete5.*/* public
